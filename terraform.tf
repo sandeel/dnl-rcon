@@ -311,7 +311,7 @@ EOF
 }
 
 resource "aws_codepipeline" "foo" {
-  name     = "tf-test-pipeline"
+  name     = "dnl-rcon-pipeline"
   role_arn = "${aws_iam_role.codepipeline_role.arn}"
 
   artifact_store {
