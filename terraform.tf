@@ -1,5 +1,16 @@
+variable "access_key" {}
+variable "secret_key" {}
+variable "ec2_keypair" {}
+variable "region" {
+  default = "eu-west-1"
+}
+variable "github_oauth_token" {}
+
 provider "aws" {
-  region     = "eu-west-1"
+
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
+  region     = "${var.region}"
 }
 
 resource "aws_vpc" "main" {
